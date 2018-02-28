@@ -1,0 +1,48 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; ":Text" ":Thing" ":Language" ":Offer" ":PostalAddress" ":CreativeWork" ":DateTime" ":Organization" ":Date" ":EventStatusType" ":Event" ":Boolean" ; /*classes style*/
+	"rdfs:Property" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"rdfs:Property" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	":previousStartDate" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	"http://webprotege.stanford.edu/R9G5bmApiOCBQO325bK2r2z" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":subEvent" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":offers" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":about" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":description" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":typicalAgeRange" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":doorTime" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":inLanguage" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":contributor" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":name" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":organizer" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":sameAs" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":performer" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":startDate" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":location" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":workPerformed" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":isAccessibleForFree" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":url" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":eventStatus" -> "rdfs:Property" [ label = "rdfs:subPropertyOf" ];
+	":Event" -> ":DateTime" [ label = ":previousStartDate" ];
+	":Event" -> ":Date" [ label = ":startDate" ];
+	":Event" -> ":PostalAddress" [ label = ":location" ];
+	":Event" -> ":CreativeWork" [ label = ":workPerformed" ];
+	":Event" -> ":Organization" [ label = ":contributor" ];
+	":Event" -> ":Organization" [ label = ":performer" ];
+	":Event" -> ":Thing" [ label = ":about" ];
+	":Event" -> ":url" [ label = ":sameAs" ];
+	":Event" -> ":Event" [ label = ":subEvent" ];
+	":Event" -> ":Language" [ label = ":inLanguage" ];
+	":Event" -> ":Text" [ label = ":typicalAgeRange" ];
+	":Event" -> ":EventStatusType" [ label = ":eventStatus" ];
+	":Event" -> ":DateTime" [ label = ":doorTime" ];
+	":Event" -> ":url" [ label = ":url" ];
+	":Event" -> ":Offer" [ label = ":offers" ];
+	":Event" -> ":Text" [ label = ":description" ];
+	":Event" -> ":Text" [ label = ":name" ];
+	":Event" -> ":Boolean" [ label = ":isAccessibleForFree" ];
+	":Event" -> ":Date" [ label = "http://webprotege.stanford.edu/R9G5bmApiOCBQO325bK2r2z" ];
+	":Event" -> ":Organization" [ label = ":organizer" ];
+
+}

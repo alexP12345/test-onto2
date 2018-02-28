@@ -1,0 +1,47 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; ":ExhibitionEvent" ":SportsEvent" ":CourseInstance" ":Intangible" ":ChildrensEvent" ":MusicEvent" "http://schema.org/ Enumeration" ":Text" ":SaleEvent" ":SocialEvent" ":Thing" ":UserInteraction" ":Festival" ":ContactPoint" ":EducationEvent" ":Language" "rdfs:Class" ":Offer" ":PostalAddress" ":CreativeWork" ":LiteraryEvent" ":StructuredValue" ":DateTime" ":Person" ":DeliveryEvent" ":FoodEvent" ":TheaterEvent" ":PerformingGroup" ":Organization" ":BusinessEvent" ":Place" ":BroadcastEvent" ":Date" ":EventStatusType" ":DanceEvent" ":DataType" ":Event" ":ScreeningEvent" ":Number" ":VisualArtsEvent" ":Boolean" ":OnDemandEvent" ":PublicationEvent" ; /*classes style*/
+	":VisualArtsEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":ScreeningEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":PostalAddress" -> ":ContactPoint" [ label = "rdfs:subClassOf" ];
+	":SaleEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Offer" -> ":Intangible" [ label = "rdfs:subClassOf" ];
+	":Text" -> ":DataType" [ label = "rdfs:subClassOf" ];
+	":BusinessEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Event" -> ":Thing" [ label = "rdfs:subClassOf" ];
+	":Boolean" -> ":DataType" [ label = "rdfs:subClassOf" ];
+	":PublicationEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Date" -> ":DataType" [ label = "rdfs:subClassOf" ];
+	":DateTime" -> ":DataType" [ label = "rdfs:subClassOf" ];
+	":DataType" -> "rdfs:Class" [ label = "rdfs:subClassOf" ];
+	":EducationEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":FoodEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":TheaterEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":DeliveryEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":CreativeWork" -> ":Thing" [ label = "rdfs:subClassOf" ];
+	":LiteraryEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Language" -> ":Intangible" [ label = "rdfs:subClassOf" ];
+	":ChildrensEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":ContactPoint" -> ":StructuredValue" [ label = "rdfs:subClassOf" ];
+	":ExhibitionEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Number" -> ":DataType" [ label = "rdfs:subClassOf" ];
+	":PerformingGroup" -> ":Organization" [ label = "rdfs:subClassOf" ];
+	":SportsEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Organization" -> ":Thing" [ label = "rdfs:subClassOf" ];
+	":Festival" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":SocialEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	"http://schema.org/ Enumeration" -> ":Intangible" [ label = "rdfs:subClassOf" ];
+	":BroadcastEvent" -> ":PublicationEvent" [ label = "rdfs:subClassOf" ];
+	":Intangible" -> ":Thing" [ label = "rdfs:subClassOf" ];
+	":DanceEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":EventStatusType" -> "http://schema.org/ Enumeration" [ label = "rdfs:subClassOf" ];
+	":MusicEvent" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":Person" -> ":Thing" [ label = "rdfs:subClassOf" ];
+	":Place" -> ":Thing" [ label = "rdfs:subClassOf" ];
+	":OnDemandEvent" -> ":PublicationEvent" [ label = "rdfs:subClassOf" ];
+	":CourseInstance" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":UserInteraction" -> ":Event" [ label = "rdfs:subClassOf" ];
+	":StructuredValue" -> ":Intangible" [ label = "rdfs:subClassOf" ];
+
+}
